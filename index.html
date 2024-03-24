@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Audio samples from "VITS2: Improving Quality and Efficiency of Single Stage Text to Speech with Adversarial Learning and Architecture Design"</title>
+    <title>Audio samples from "ToneUnit: A Speech Discretization Approach for Tonal Language Speech Synthesis"</title>
     <meta charset="UTF-8">
-    <title>VITS2: Improving Quality and Efficiency of Single Stage Text to Speech with Adversarial Learning and Architecture Design</title>
+    <title>ToneUnit: A Speech Discretization Approach for Tonal Language Speech Synthesis</title>
     <style>
         red {color: red}
         audio {width: 250px}
@@ -24,23 +24,26 @@
 <body>
     <article>
       <header>
-        <h1>Audio samples from "VITS2: Improving Quality and Efficiency of Single-Stage Text-to-Speech with Adversarial Learning and Architecture Design"</h1>
+        <h1>Audio samples from "ToneUnit: A Speech Discretization Approach for Tonal Language Speech Synthesis"</h1>
       </header>
     </article>
 <!--    <p><b>Paper:</b> <a href="">arXiv</a></p>-->
 <!--    <p><b>Authors</b>: </p>-->
     <div>
       <b>Abstract:</b>
-      Single-stage text-to-speech models have been actively studied recently, and their results have outperformed two-stage pipeline systems.
-      Although the previous single-stage model has made great progress, there is room for improvement in terms of its intermittent unnaturalness, computational efficiency, and strong dependence on phoneme conversion.
-      In this work, we introduce VITS2, a single-stage text-to-speech model that efficiently synthesizes a more natural speech by improving several aspects of the previous work.
-      We propose improved structures and training mechanisms and present that the proposed methods are effective
-      in improving naturalness, similarity of speech characteristics in a multi-speaker model, and efficiency of training and inference.
-      Furthermore, we demonstrate that the strong dependence on phoneme conversion in previous works can be significantly reduced with our method, which allows a fully end-to-end single-stage approach.
+      Representing speech as discretized units has numerous benefits in supporting downstream spoken language processing tasks. 
+      However, the approach has been less explored in speech synthesis of tonal languages like Mandarin Chinese. 
+      Our preliminary experiments on Chinese speech synthesis reveal the issue of ``tone shift", where 
+      a synthesized speech utterance contains correct base syllables but incorrect tones. To address the issue, 
+      we propose the ToneUnit framework, which leverages annotated data with tone labels as CTC supervision 
+      to learn tone-aware discrete speech units for Mandarin Chinese speech. Our findings indicate that
+      the discrete units acquired through the TonUnit resolve the ``tone shift" issue in synthesized Chinese speech 
+      and yield favorable results in English synthesis. Moreover,  the experimental results suggest that 
+      finite scalar quantization enhances the effectiveness of ToneUnit. Notably, ToneUnit can work effectively even with minimal annotated data.
     <p></p>
     </div>
 
-    <p class="toc_title">Contents</p>
+<!--     <p class="toc_title">Contents</p>
     <div id="toc_container">
     <ul>
       <li><a href="#ss">Single Speaker (LJ Speech Dataset)</a></li>
@@ -48,11 +51,11 @@
       <li><a href="#ms">Multiple Speakers (VCTK Dataset)</a></li>
       <li><a href="#cmp_jets">Comparison with JETS (Author Feedback, LJ Speech Dataset / texts from LibriTTS test set)</a></li>
     </ul>
-    </div>
+    </div> -->
 
     <p>&nbsp;</p>
     <div>
-      <a name="ss"><h2>Single Speaker (LJ Speech Dataset)</h2></a>
+      <a name="zh"><h2>Chinese Speech Synthesis</h2></a>
       <hr>
       <table>
         <tbody>
